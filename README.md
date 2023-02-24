@@ -1,20 +1,26 @@
+
 ## Music app
+
+API-сервис для управления каталогом исполнителей, композиций и альбомов
+
 ### Стек технологий
-- Python 3.8
-- Django 4.1.7
-- Django REST Framework 3.14.0
+`Python 3.8`
+`Django 4.1.7`
+`Django REST Framework 3.14.0`
 
-### Установка и запуск
 
-1. Cклонировать репозиторий `https://github.com/master-of-puppetsss/music_app.git`
+## Установка и запуск
 
-2. Создать и заполнить .env и .env.db файлы по аналогии
+1. Cклонировать репозиторий `git@github.com:iricshkin/singers-drf-project.git`
+
+2. Создать и заполнить .env файл по аналогии с .env.example
 
 3. Запустить контейнер с сервисами
 
 ```
 sudo docker-compose up -d --build
 ```
+
 
 При первом запуске выполните следующие команды:
 
@@ -24,13 +30,24 @@ sudo docker-compose exec web python manage.py createsuperuser
 sudo docker-compose exec web python manage.py collectstatic --no-input
 ```
 
-### Описание API:
-`Документация` -/swagger/
-`Список всех исполнителей или создание нового` - /api/singers/ 
-`Получить(обновить, удалить) исполнителя по id` - /api/v1/singers/{id}/
-`Список всех альбомов или создание нового` - /api/albums/
-`Получить(обновить, удалить) альбом по id` - /api/v1/albums/{id}/
-`Список всех композиций или создание новой` - /api/songs/
-`Получить(обновить, удалить) композицию по id` - /api/v1/songs/{id}/
-`Список песен в альбомах или создание новой` - /api/songs_in_albums/
-`Получить(обновить, удалить) песню в альбоме по id` - /api/v1/singers/{id}/
+## Переменные окружения
+
+Чтобы запустить этот проект, вам нужно будет добавить следующие переменные окружения в ваш файл .env
+
+`DEBUG` `SECRET_KEY` `DJANGO_ALLOWED_HOSTS` `DATABASE_NAME` `DATABASE_USER` `DATABASE_PASSWORD` `DATABASE_HOST` `DATABASE_PORT`
+
+Также в .env.db добавить следующие переменные:
+
+`POSTGRES_DB` `POSTGRES_USER` `POSTGRES_PASSWORD`
+## Описание API
+
+- `/swagger/` - документация
+- `/api/singers/` - Список всех исполнителей или создание нового
+- `/api/singers/{id}/` - Получить(обновить, удалить) исполнителя по id
+- `/api/albums/` - Список всех альбомов или создание нового
+- `/api/albums/{id}/` - Получить(обновить, удалить) альбом по id
+- `/api/songs/` - Список всех композиций или создание новой
+- `/api/songs/{id}/` - Получить(обновить, удалить) композицию по id
+- `/api/songs_in_albums/` - Список песен в альбомах или создание новой
+- `/api/songs_in_albums/{id}/` - Получить(обновить, удалить) песню в альбоме по id
+
