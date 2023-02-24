@@ -17,18 +17,18 @@ API-сервис для управления каталогом исполнит
 
 3. Запустить контейнер с сервисами
 
-```
-sudo docker-compose up -d --build
-```
+  ```
+  sudo docker-compose up -d --build
+  ```
 
 
-При первом запуске выполните следующие команды:
+  При первом запуске выполните следующие команды:
 
-```
-sudo docker-compose exec web python manage.py migrate
-sudo docker-compose exec web python manage.py createsuperuser
-sudo docker-compose exec web python manage.py collectstatic --no-input
-```
+  ```
+  sudo docker-compose exec web python manage.py migrate
+  sudo docker-compose exec web python manage.py createsuperuser
+  sudo docker-compose exec web python manage.py collectstatic --no-input
+  ```
 
 ## Переменные окружения
 
