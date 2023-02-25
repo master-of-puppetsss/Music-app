@@ -11,7 +11,7 @@ API-сервис для управления каталогом исполнит
 
 ## Установка и запуск
 
-1. Cклонировать репозиторий `git@github.com:iricshkin/singers-drf-project.git`
+1. Cклонировать репозиторий `https://github.com/master-of-puppetsss/Music-app.git`
 
 2. Создать и заполнить .env файл по аналогии с .env.example
 
